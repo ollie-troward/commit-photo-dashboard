@@ -1,0 +1,5 @@
+### Dashboard hook ###
+curl \
+  -F "image=@$HOME/.lolcommits/photo_dashboard/$hash.jpg" \
+  http://localhost:3000/
+### Dashboard hook end ###
