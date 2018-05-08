@@ -1,0 +1,3 @@
+curl \
+  -F "image=@images/DcHxk2TUQAAOsLD.jpg" \
+  http://localhost:3000/

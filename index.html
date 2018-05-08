@@ -1,0 +1,22 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+</head>
+<body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<div class="container text-center">
+  <h1>Commit Gallery</h1>
+  <div id="images"></div>
+</div>
+<script type="text/javascript">
+$(function () {
+    var socket = io.connect('http://localhost:3000');
+    socket.on('commit', function(msg) {
+      $('#images').prepend($('<img src="' + msg + '" class="img-thumbnail"> <br><br>').text(msg));
+    });
+  });
+</script>
+</body>
+</html>
