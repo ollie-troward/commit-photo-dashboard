@@ -1,4 +1,5 @@
 ### Dashboard hook ###
+hash=`git rev-parse --short=11 HEAD`
 curl \
   -F "image=@$HOME/.lolcommits/photo_dashboard/$hash.jpg" \
   http://localhost:3000/
